@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secret Society</title>
+  <meta name="description" content="An invitation-only collective. Read the manifesto. Consider initiation." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://esm.sh/three@0.160.0",
+      "gsap": "https://esm.sh/gsap@3.12.5",
+      "@studio-freight/lenis": "https://esm.sh/@studio-freight/lenis@1.0.35"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <a class="brand" href="#top" aria-label="Secret Society home">
+      <span class="brand-mark" aria-hidden="true">◎</span>
+      <span class="brand-text">Secret Society</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#manifesto">Manifesto</a>
+      <a href="#initiation">Initiation</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Invitation">
+      <div class="hero-canvas-wrap" aria-hidden="true">
+        <canvas id="scene"></canvas>
+      </div>
+      <div class="hero-inner">
+        <div class="sigil" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="sigil-svg" role="img" aria-label="Society Sigil">
+            <circle cx="100" cy="100" r="74" class="sigil-ring"></circle>
+            <path class="sigil-mark" d="M100 36 L126 100 L100 164 L74 100 Z M100 64 A36 36 0 1 0 100 136 A36 36 0 1 0 100 64 Z"/>
+          </svg>
+        </div>
+        <h1 class="headline">
+          The first rule is to notice.
+        </h1>
+        <p class="subhead">
+          Private gatherings. Public impact. No followers. Only contributors.
+        </p>
+        <div class="cta-row">
+          <a href="#initiation" class="button primary">Request Initiation</a>
+          <a href="#manifesto" class="button ghost">Read Manifesto</a>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="label">Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>Invitation-only</span>
+        <span>Action over applause</span>
+        <span>Privacy by default</span>
+        <span>Signal, not noise</span>
+        <span>Invitation-only</span>
+        <span>Action over applause</span>
+        <span>Privacy by default</span>
+        <span>Signal, not noise</span>
+      </div>
+    </section>
+
+    <section id="manifesto" class="section manifesto" aria-labelledby="manifesto-title">
+      <div class="container">
+        <h2 id="manifesto-title">Manifesto</h2>
+        <ul class="tenets">
+          <li data-reveal>We optimize for depth over volume.</li>
+          <li data-reveal>We ship in public, coordinate in private.</li>
+          <li data-reveal>We build leverage: tools, networks, knowledge.</li>
+          <li data-reveal>We reject spectacle. We design for outcomes.</li>
+          <li data-reveal>We are rigorous with time and generous with credit.</li>
+          <li data-reveal>We choose compounding collaborations over transactions.</li>
+          <li data-reveal>We keep counsel, never secrets that harm.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="initiation" class="section initiation" aria-labelledby="initiation-title">
+      <div class="container">
+        <h2 id="initiation-title">Initiation</h2>
+        <p class="lede">Entry is not purchased. It is earned. If invited, you’ll know. If not, make it undeniable.</p>
+        <form class="apply" aria-label="Request initiation form" netlify>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="proof">Proof of Work (link)</label>
+            <input id="proof" name="proof" type="url" placeholder="https://..." required />
+          </div>
+          <div class="field">
+            <label for="note">One paragraph on what you compound</label>
+            <textarea id="note" name="note" rows="5" required></textarea>
+          </div>
+          <button class="button primary" type="submit">Submit Request</button>
+          <p class="form-note">We read every submission. Replies within 7 days.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="calendar" class="section calendar" aria-labelledby="calendar-title">
+      <div class="container">
+        <h2 id="calendar-title">Calendar</h2>
+        <ul class="events" role="list">
+          <li class="event" data-reveal>
+            <span class="when">Monthly</span>
+            <span class="title">The Quiet Room</span>
+            <span class="desc">Unrecorded strategy session. Cameras off. Notes on.</span>
+          </li>
+          <li class="event" data-reveal>
+            <span class="when">Quarterly</span>
+            <span class="title">Field Test</span>
+            <span class="desc">Collaborative sprints to ship something real in 48 hours.</span>
+          </li>
+          <li class="event" data-reveal>
+            <span class="when">Ad hoc</span>
+            <span class="title">Signals</span>
+            <span class="desc">Rapid calls when timing matters more than polish.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="accordion" role="list">
+          <details class="item" data-reveal>
+            <summary>Who runs this?</summary>
+            <p>Operators across disciplines. No figureheads. Stewarded, not owned.</p>
+          </details>
+          <details class="item" data-reveal>
+            <summary>What’s the cost?</summary>
+            <p>Contribution. Financial support is optional, never primary.</p>
+          </details>
+          <details class="item" data-reveal>
+            <summary>Is this a DAO, club, or brand?</summary>
+            <p>None of the above. It’s a working network for people who build.</p>
+          </details>
+          <details class="item" data-reveal>
+            <summary>How do I increase my odds?</summary>
+            <p>Show your work, compound relationships, help first, ask later.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footmark" aria-hidden="true">◎</p>
+      <p>© <span id="year"></span> Secret Society. Keep counsel.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
