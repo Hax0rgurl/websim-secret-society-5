@@ -30,6 +30,7 @@
       <a href="#manifesto">Manifesto</a>
       <a href="#initiation">Initiation</a>
       <a href="#calendar">Calendar</a>
+      <a href="#gallery">Gallery</a>
       <a href="#faq">FAQ</a>
     </nav>
   </header>
@@ -94,7 +95,7 @@
     <section id="initiation" class="section initiation" aria-labelledby="initiation-title">
       <div class="container">
         <h2 id="initiation-title">Initiation</h2>
-        <p class="lede">Entry is not purchased. It is earned. If invited, you’ll know. If not, make it undeniable.</p>
+        <p class="lede">Entry is not purchased. It is earned. If invited, you'll know. If not, make it undeniable.</p>
         <form class="apply" aria-label="Request initiation form" netlify>
           <div class="field">
             <label for="name">Name</label>
@@ -141,6 +142,29 @@
       </div>
     </section>
 
+    <section id="gallery" class="section gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Gallery</h2>
+        <div class="gallery-grid">
+          <a class="item" href="./gallery-01.png" data-index="0" data-reveal><img src="./gallery-01.png" alt="Masked ball in candlelit hall"></a>
+          <a class="item" href="./gallery-02.png" data-index="1" data-reveal><img src="./gallery-02.png" alt="Venetian masks and red velvet room"></a>
+          <a class="item" href="./gallery-03.png" data-index="2" data-reveal><img src="./gallery-03.png" alt="Gold-trimmed mirrors and silhouettes"></a>
+          <a class="item" href="./gallery-04.png" data-index="3" data-reveal><img src="./gallery-04.png" alt="Grand chandelier over secret banquet"></a>
+          <a class="item" href="./gallery-05.png" data-index="4" data-reveal><img src="./gallery-05.png" alt="Procession of cloaked figures"></a>
+          <a class="item" href="./gallery-06.png" data-index="5" data-reveal><img src="./gallery-06.png" alt="Opulent staircase, masked guests"></a>
+          <a class="item" href="./gallery-07.png" data-index="6" data-reveal><img src="./gallery-07.png" alt="Candlelit library gathering"></a>
+          <a class="item" href="./gallery-08.png" data-index="7" data-reveal><img src="./gallery-08.png" alt="Gilded room, ritual circle"></a>
+          <a class="item" href="./gallery-09.png" data-index="8" data-reveal><img src="./gallery-09.png" alt="Black and gold ballroom"></a>
+          <a class="item" href="./gallery-10.png" data-index="9" data-reveal><img src="./gallery-10.png" alt="Eyes-wide-shut style waltz"></a>
+          <a class="item" href="./gallery-11.png" data-index="10" data-reveal><img src="./gallery-11.png" alt="Marble hall, hooded figures"></a>
+          <a class="item" href="./gallery-12.png" data-index="11" data-reveal><img src="./gallery-12.png" alt="Masks on silver trays"></a>
+          <a class="item" href="./gallery-13.png" data-index="12" data-reveal><img src="./gallery-13.png" alt="Crescent moon courtyard"></a>
+          <a class="item" href="./gallery-14.png" data-index="13" data-reveal><img src="./gallery-14.png" alt="Secret toasts under chandeliers"></a>
+          <a class="item" href="./gallery-15.png" data-index="14" data-reveal><img src="./gallery-15.png" alt="Ornate door with sigil"></a>
+        </div>
+      </div>
+    </section>
+
     <section id="faq" class="section faq" aria-labelledby="faq-title">
       <div class="container">
         <h2 id="faq-title">FAQ</h2>
@@ -150,12 +174,12 @@
             <p>Operators across disciplines. No figureheads. Stewarded, not owned.</p>
           </details>
           <details class="item" data-reveal>
-            <summary>What’s the cost?</summary>
+            <summary>What's the cost?</summary>
             <p>Contribution. Financial support is optional, never primary.</p>
           </details>
           <details class="item" data-reveal>
             <summary>Is this a DAO, club, or brand?</summary>
-            <p>None of the above. It’s a working network for people who build.</p>
+            <p>None of the above. It's a working network for people who build.</p>
           </details>
           <details class="item" data-reveal>
             <summary>How do I increase my odds?</summary>
@@ -173,8 +197,14 @@
     </div>
   </footer>
 
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lb-btn lb-close" aria-label="Close">×</button>
+    <button class="lb-btn lb-prev" aria-label="Previous">‹</button>
+    <img class="lb-img" alt="">
+    <button class="lb-btn lb-next" aria-label="Next">›</button>
+  </div>
+
   <script type="module" src="./app.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
-

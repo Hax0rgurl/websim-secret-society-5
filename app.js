@@ -123,6 +123,20 @@ window.addEventListener('pointermove', (e) => {
 const ro = new ResizeObserver(resize);
 ro.observe(qs('.hero-canvas-wrap'));
 
+/* Gallery lightbox */
+const thumbs = Array.from(document.querySelectorAll('.gallery .item'));
+const lb = document.getElementById('lightbox');
+const lbImg = lb?.querySelector('.lb-img');
+let gi = 0;
+function openLB(i){ gi = (i+thumbs.length)%thumbs.length; lbImg.src = thumbs[gi].href; lb.classList.add('open'); lb.removeAttribute('hidden'); }
+function closeLB(){ lb.classList.remove('open'); lb.setAttribute('hidden',''); }
+thumbs.forEach((a,i)=>a.addEventListener('click',e=>{ e.preventDefault(); openLB(i); }));
+lb?.addEventListener('click', e=>{ if(e.target===lb) closeLB(); });
+lb?.querySelector('.lb-close')?.addEventListener('click', closeLB);
+lb?.querySelector('.lb-prev')?.addEventListener('click', ()=>openLB(gi-1));
+lb?.querySelector('.lb-next')?.addEventListener('click', ()=>openLB(gi+1));
+window.addEventListener('keydown', e=>{ if(!lb?.classList.contains('open')) return; if(e.key==='Escape') closeLB(); if(e.key==='ArrowLeft') openLB(gi-1); if(e.key==='ArrowRight') openLB(gi+1); });
+
 /* Form submission effect (no backend assumed) */
 const form = document.querySelector('.apply');
 form?.addEventListener('submit', (e) => {
