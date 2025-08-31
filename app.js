@@ -35,7 +35,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 const group = new THREE.Group();
 scene.add(group);
 
-const count = 1200;
+const count = 600;
 const radius = 3.2;
 const geometry = new THREE.BufferGeometry();
 const positions = new Float32Array(count * 3);
@@ -54,7 +54,7 @@ geometry.setAttribute('aSize', new THREE.BufferAttribute(sizes, 1));
 
 const material = new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
-  uniforms: { uTime: { value: 0.0 }, uColor: { value: new THREE.Color(1,1,1) } },
+  uniforms: { uTime: { value: 0.0 }, uColor: { value: new THREE.Color('#D4AF37') } },
   vertexShader: `
     uniform float uTime;
     attribute float aSize;
@@ -136,4 +136,3 @@ form?.addEventListener('submit', (e) => {
     alert('Request received. We will be in touch.');
   }, 900);
 });
-

@@ -1,4 +1,4 @@
-:root { --bg: #0b0b0b; --fg: #f5f5f5; --muted:#9a9a9a; --line:#1c1c1c; --accent:#ffffff; }
+:root { --bg: #120a1f; --fg: #f6f4ff; --muted:#b7aee0; --line:#24163a; --accent:#d4af37; }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
@@ -88,4 +88,3 @@ input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(
   .site-nav { display: none; }
   .event { grid-template-columns: 1fr; }
 }
-
