@@ -1,10 +1,11 @@
 :root { --bg: #120a1f; --fg: #f6f4ff; --muted:#b7aee0; --line:#24163a; --accent:#d4af37; }
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
   font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 a { color: var(--fg); text-decoration: none; }
 .container { width: min(1100px, 92vw); margin: 0 auto; }

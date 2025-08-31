@@ -12,6 +12,7 @@ qs('#year').textContent = new Date().getFullYear();
 const lenis = new Lenis({ smoothWheel: true, smoothTouch: false, lerp: 0.12 });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
+window.addEventListener('load', () => lenis.resize());
 
 /* Reveal on scroll */
 const io = new IntersectionObserver((entries) => {
