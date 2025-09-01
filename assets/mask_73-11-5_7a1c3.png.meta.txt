@@ -1,0 +1,11 @@
+FileName: mask_73-11-5_7a1c3.png
+Make: Red Covenant Imaging
+Model: Lapidary Orb / Scribe Engine
+Software: Liturgy v2.7
+Artist: ARCHON-III
+UserComment: RAIL_FENCE[3-11-5] → “NOEYEREMAINSCLOSED”
+DateTimeOriginal: 2017:07:03 22:29:06
+GPSLatitude: 25.774,-80.19
+Vigenere: KEY=SEVENCANDLES
+Checksum: 7A1C3
+
