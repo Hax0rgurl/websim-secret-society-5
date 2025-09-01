@@ -1,18 +1,11 @@
 import * as THREE from 'three';
 import { gsap } from 'gsap';
-import Lenis from '@studio-freight/lenis';
 
 /* Utilities */
 const qs = (s, r = document) => r.querySelector(s);
 
 /* Footer year */
 qs('#year').textContent = new Date().getFullYear();
-
-/* Smooth scroll */
-const lenis = new Lenis({ smoothWheel: true, smoothTouch: true, lerp: 0.12 });
-function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-requestAnimationFrame(raf);
-window.addEventListener('load', () => lenis.resize());
 
 /* Reveal on scroll */
 const io = new IntersectionObserver((entries) => {
@@ -163,3 +156,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
     track.dataset.duplicated = '1';
   }
 });
+
+try { document.documentElement.style.scrollBehavior = 'smooth'; } catch {}
