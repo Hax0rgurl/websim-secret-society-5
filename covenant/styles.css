@@ -1,6 +1,6 @@
 :root{--bg:#000;--fg:#ccc;--muted:#888;--line:#111;--red:#e10600;--glow:0 0 12px rgba(225,6,0,.45);}
 *{box-sizing:border-box}
-html,body{height:100%}
+html,body{min-height:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:"Space Mono",ui-monospace,Menlo,monospace;line-height:1.55;letter-spacing:.01em}
 a{color:var(--fg);text-decoration:none}
 a:hover{color:#fff;text-shadow:var(--glow)}
