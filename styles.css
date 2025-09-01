@@ -59,12 +59,13 @@ a { color: var(--fg); text-decoration: none; }
 .initiation .apply { display: grid; gap: 16px; max-width: 680px; }
 .field { display: grid; gap: 8px; }
 label { font-size: 13px; color: var(--muted); }
-input, textarea {
+input, textarea, select {
   width: 100%; background: #0e0e0e; color: var(--fg); border: 1px solid var(--line);
   border-radius: 10px; padding: 12px 14px; font: inherit; outline: none; transition: border-color .2s ease, box-shadow .2s ease;
 }
 input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(255,255,255,0.03); }
 .form-note { color: var(--muted); font-size: 12px; }
+.form-status { min-height: 18px; color: var(--muted); font-size: 12px; margin-top: -6px; }
 
 .calendar .events { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .event { display: grid; grid-template-columns: 90px 1fr; gap: 14px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; }

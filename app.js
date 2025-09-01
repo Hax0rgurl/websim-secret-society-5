@@ -140,14 +140,18 @@ window.addEventListener('keydown', e=>{ if(!lb?.classList.contains('open')) retu
 
 /* Form submission effect (no backend assumed) */
 const form = document.querySelector('.apply');
-form?.addEventListener('submit', (e) => {
+form?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = form.querySelector('button');
-  btn.disabled = true; btn.textContent = 'Submitting...';
-  setTimeout(() => {
-    form.reset();
-    btn.disabled = false; btn.textContent = 'Submit Request';
-    gsap.fromTo('.form-note', { opacity: 0 }, { opacity: 1, duration: 0.6 });
-    alert('Request received. We will be in touch.');
-  }, 900);
+  const btn = form.querySelector('button'); const status = form.querySelector('.form-status');
+  btn.disabled = true; btn.textContent = 'Submitting...'; status.textContent = '';
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data?.message || 'Submission failed');
+    form.reset(); status.textContent = 'Application received. We will be in touch.'; 
+  } catch (err) {
+    status.textContent = String(err.message || err);
+  } finally {
+    btn.disabled = false; btn.textContent = 'Submit Application';
+  }
 });
