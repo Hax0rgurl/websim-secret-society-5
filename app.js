@@ -151,6 +151,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
     track.innerHTML = track.innerHTML + track.innerHTML; // seamless loop
     track.dataset.duplicated = '1';
   }
+  // Replace any empty legacy SVG sigils with the visible PNG
+  document.querySelectorAll('.sigil-svg').forEach(svg=>{
+    const img = new Image();
+    img.src = './sigil-triangle.png';
+    img.alt = 'Society Sigil';
+    img.className = 'sigil-img';
+    svg.replaceWith(img);
+  });
 });
 
 try { document.documentElement.style.scrollBehavior = 'smooth'; } catch {}
