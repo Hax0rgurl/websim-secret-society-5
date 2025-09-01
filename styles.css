@@ -1,4 +1,4 @@
-:root { --bg: #120a1f; --fg: #f6f4ff; --muted:#b7aee0; --line:#24163a; --accent:#d4af37; }
+:root { --bg: #000; --fg: #eaeaea; --muted:#9aa0a6; --line:#1a1a1a; --accent:#e10600; }
 * { box-sizing: border-box; }
 html, body { min-height: 100%; }
 body {
@@ -8,12 +8,12 @@ body {
   overflow-x: hidden;
 }
 a { color: var(--fg); text-decoration: none; }
-.container { width: min(1100px, 92vw); margin: 0 auto; }
+.container { width: min(1100px, 92vw); margin: 0 auto; padding: 0 20px; }
 
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 20;
   display: flex; justify-content: space-between; align-items: center;
-  padding: 16px 24px; border-bottom: 1px solid var(--line); background: linear-gradient(to bottom, rgba(11,11,11,0.9), rgba(11,11,11,0.3) 60%, rgba(11,11,11,0));
+  padding: 16px 24px; border-bottom: 1px solid var(--line); background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.3) 60%, rgba(0,0,0,0));
   backdrop-filter: blur(6px);
 }
 .brand { display: inline-flex; gap: 10px; align-items: center; letter-spacing: .02em; }
@@ -72,7 +72,7 @@ input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(
 .event { display: grid; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; align-content: start; }
 .event .when { text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
 .event .title { font-weight: 700; }
-.event .desc { color: var(--muted); }
+.event .desc { color: var(--muted); overflow-wrap: anywhere; hyphens: auto; }
 
 .faq .accordion .item { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; }
 .faq summary { cursor: pointer; list-style: none; }
