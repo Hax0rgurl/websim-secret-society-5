@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   // Replace any empty legacy SVG sigils with the visible PNG
   document.querySelectorAll('.sigil-svg').forEach(svg=>{
     const img = new Image();
-    img.src = './sigil-triangle.png';
+    img.src = './circular-sigil.png';
     img.alt = 'Society Sigil';
     img.className = 'sigil-img';
     svg.replaceWith(img);
