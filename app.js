@@ -155,3 +155,11 @@ form?.addEventListener('submit', async (e) => {
     btn.disabled = false; btn.textContent = 'Submit Application';
   }
 });
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const track = document.querySelector('.marquee .track');
+  if (track && !track.dataset.duplicated) {
+    track.innerHTML = track.innerHTML + track.innerHTML; // seamless loop
+    track.dataset.duplicated = '1';
+  }
+});
