@@ -68,8 +68,8 @@ input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(
 .form-note { color: var(--muted); font-size: 12px; }
 .form-status { min-height: 18px; color: var(--muted); font-size: 12px; margin-top: -6px; }
 
-.calendar .events { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
-.event { scroll-snap-align: start; min-width: clamp(240px, 32vw, 360px); display: grid; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; }
+.calendar .events { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; overflow: visible; padding-bottom: 0; }
+.event { display: grid; gap: 6px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; align-content: start; }
 .event .when { text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
 .event .title { font-weight: 700; }
 .event .desc { color: var(--muted); }
