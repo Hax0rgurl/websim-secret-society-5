@@ -50,6 +50,7 @@ a { color: var(--fg); text-decoration: none; }
 .marquee .track span { opacity: .7; }
 
 .section { padding: clamp(60px, 12vw, 120px) 0; }
+.section h2, .headline, .event .title { font-family: "Space Mono", monospace; letter-spacing: .01em; }
 .section h2 { font-size: clamp(22px, 3vw, 32px); margin: 0 0 16px; }
 .lede { color: var(--muted); margin: 0 0 24px; }
 
@@ -67,9 +68,9 @@ input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(
 .form-note { color: var(--muted); font-size: 12px; }
 .form-status { min-height: 18px; color: var(--muted); font-size: 12px; margin-top: -6px; }
 
-.calendar .events { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.event { display: grid; grid-template-columns: 90px 1fr; gap: 14px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #0d0d0d; }
-.event .when { color: var(--muted); font-family: "Space Mono", monospace; font-size: 12px; letter-spacing: .02em; }
+.calendar .events { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.event { grid-template-columns: 1fr; align-content: start; min-height: 160px; }
+.event .when { text-transform: uppercase; letter-spacing: .08em; opacity: .8; }
 .event .title { font-weight: 700; }
 .event .desc { color: var(--muted); }
 
@@ -106,6 +107,7 @@ input:focus, textarea:focus { border-color: #2a2a2a; box-shadow: 0 0 0 4px rgba(
 }
 @media (max-width: 900px) {
   .gallery-grid { column-count: 2; }
+  .calendar .events { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .gallery-grid { column-count: 1; }
