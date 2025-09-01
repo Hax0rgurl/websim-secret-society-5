@@ -26,8 +26,9 @@ a { color: var(--fg); text-decoration: none; }
 .hero-canvas-wrap { position: absolute; inset: 0; pointer-events: none; }
 #scene { width: 100%; height: 100%; display: block; }
 .hero-inner { position: relative; z-index: 2; text-align: center; padding: 40px 20px; }
-.sigil { width: clamp(90px, 12vw, 160px); margin: 0 auto 18px; color: var(--accent); }
-.sigil-svg { display: block; width: 100%; height: auto; }
+.sigil { width: clamp(120px, 18vw, 220px); margin: 0 auto 18px; color: var(--accent); }
+.sigil .hero-photo{ width:100%; height:auto; display:block; border-radius:50%; overflow:hidden; object-fit:cover; mix-blend-mode:screen; }
+.sigil-img { display:block; width:100%; height:auto; }
 .sigil-ring, .sigil-mark { fill: none; stroke: var(--accent); stroke-width: 2; }
 .sigil-mark { fill: var(--accent); opacity: .06; }
 

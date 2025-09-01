@@ -13,10 +13,6 @@ const io = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
 document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
 
-/* Hero Sigil micro-anim */
-gsap.to('.sigil-ring', { rotate: 360, transformOrigin: '50% 50%', duration: 40, repeat: -1, ease: 'none' });
-gsap.to('.sigil-mark', { yoyo: true, repeat: -1, duration: 3.2, ease: 'sine.inOut', opacity: 0.12 });
-
 /* Three.js scene: subtle particle halo */
 const canvas = qs('#scene');
 const scene = new THREE.Scene();
@@ -158,3 +154,5 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 try { document.documentElement.style.scrollBehavior = 'smooth'; } catch {}
+
+gsap.fromTo('.sigil-img',{ scale:0.98, opacity:0.95 },{ scale:1, opacity:1, duration:2.2, ease:'sine.inOut', yoyo:true, repeat:-1 });
