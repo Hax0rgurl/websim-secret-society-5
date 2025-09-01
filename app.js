@@ -9,7 +9,7 @@ const qs = (s, r = document) => r.querySelector(s);
 qs('#year').textContent = new Date().getFullYear();
 
 /* Smooth scroll */
-const lenis = new Lenis({ smoothWheel: true, smoothTouch: false, lerp: 0.12 });
+const lenis = new Lenis({ smoothWheel: true, smoothTouch: true, lerp: 0.12 });
 function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
 requestAnimationFrame(raf);
 window.addEventListener('load', () => lenis.resize());
